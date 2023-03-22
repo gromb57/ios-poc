@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A054E42229CB805B00C1C1AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E42129CB805B00C1C1AD /* AppDelegate.swift */; };
 		A054E42429CB805B00C1C1AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E42329CB805B00C1C1AD /* SceneDelegate.swift */; };
-		A054E42629CB805B00C1C1AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E42529CB805B00C1C1AD /* ViewController.swift */; };
+		A054E42629CB805B00C1C1AD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E42529CB805B00C1C1AD /* RootViewController.swift */; };
 		A054E42929CB805B00C1C1AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A054E42729CB805B00C1C1AD /* Main.storyboard */; };
 		A054E42C29CB805B00C1C1AD /* ios_poc.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A054E42A29CB805B00C1C1AD /* ios_poc.xcdatamodeld */; };
 		A054E42E29CB805E00C1C1AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A054E42D29CB805E00C1C1AD /* Assets.xcassets */; };
@@ -17,6 +17,12 @@
 		A054E43C29CB805E00C1C1AD /* ios_pocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E43B29CB805E00C1C1AD /* ios_pocTests.swift */; };
 		A054E44629CB805E00C1C1AD /* ios_pocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E44529CB805E00C1C1AD /* ios_pocUITests.swift */; };
 		A054E44829CB805E00C1C1AD /* ios_pocUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E44729CB805E00C1C1AD /* ios_pocUITestsLaunchTests.swift */; };
+		A054E47B29CB92C500C1C1AD /* NeuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E47A29CB92C500C1C1AD /* NeuVC.swift */; };
+		A054E47E29CB97EE00C1C1AD /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E47D29CB97EE00C1C1AD /* Theme.swift */; };
+		A054E48029CB983800C1C1AD /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E47F29CB983800C1C1AD /* ThemeManager.swift */; };
+		A054E48229CB9BCE00C1C1AD /* ThemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E48129CB9BCE00C1C1AD /* ThemeType.swift */; };
+		A054E48629CBA40300C1C1AD /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E48529CBA40300C1C1AD /* UIView+Constraints.swift */; };
+		A054E48829CBA51100C1C1AD /* UIScrollView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E48729CBA51100C1C1AD /* UIScrollView+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +46,7 @@
 		A054E41E29CB805B00C1C1AD /* ios-poc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-poc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A054E42129CB805B00C1C1AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A054E42329CB805B00C1C1AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A054E42529CB805B00C1C1AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A054E42529CB805B00C1C1AD /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		A054E42829CB805B00C1C1AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A054E42B29CB805B00C1C1AD /* ios_poc.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_poc.xcdatamodel; sourceTree = "<group>"; };
 		A054E42D29CB805E00C1C1AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +57,12 @@
 		A054E44129CB805E00C1C1AD /* ios-pocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-pocUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A054E44529CB805E00C1C1AD /* ios_pocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_pocUITests.swift; sourceTree = "<group>"; };
 		A054E44729CB805E00C1C1AD /* ios_pocUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_pocUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A054E47A29CB92C500C1C1AD /* NeuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuVC.swift; sourceTree = "<group>"; };
+		A054E47D29CB97EE00C1C1AD /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A054E47F29CB983800C1C1AD /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		A054E48129CB9BCE00C1C1AD /* ThemeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeType.swift; sourceTree = "<group>"; };
+		A054E48529CBA40300C1C1AD /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		A054E48729CBA51100C1C1AD /* UIScrollView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,13 +114,16 @@
 			isa = PBXGroup;
 			children = (
 				A054E42129CB805B00C1C1AD /* AppDelegate.swift */,
-				A054E42329CB805B00C1C1AD /* SceneDelegate.swift */,
-				A054E42529CB805B00C1C1AD /* ViewController.swift */,
-				A054E42729CB805B00C1C1AD /* Main.storyboard */,
 				A054E42D29CB805E00C1C1AD /* Assets.xcassets */,
-				A054E42F29CB805E00C1C1AD /* LaunchScreen.storyboard */,
 				A054E43229CB805E00C1C1AD /* Info.plist */,
 				A054E42A29CB805B00C1C1AD /* ios_poc.xcdatamodeld */,
+				A054E42F29CB805E00C1C1AD /* LaunchScreen.storyboard */,
+				A054E42729CB805B00C1C1AD /* Main.storyboard */,
+				A054E45429CB8F3F00C1C1AD /* neumorphism */,
+				A054E42529CB805B00C1C1AD /* RootViewController.swift */,
+				A054E42329CB805B00C1C1AD /* SceneDelegate.swift */,
+				A054E47C29CB97D700C1C1AD /* theme */,
+				A054E48329CBA3D000C1C1AD /* utils */,
 			);
 			path = "ios-poc";
 			sourceTree = "<group>";
@@ -128,6 +143,57 @@
 				A054E44729CB805E00C1C1AD /* ios_pocUITestsLaunchTests.swift */,
 			);
 			path = "ios-pocUITests";
+			sourceTree = "<group>";
+		};
+		A054E45429CB8F3F00C1C1AD /* neumorphism */ = {
+			isa = PBXGroup;
+			children = (
+				A054E47829CB907F00C1C1AD /* gui */,
+				A054E47929CB908D00C1C1AD /* vc */,
+			);
+			path = neumorphism;
+			sourceTree = "<group>";
+		};
+		A054E47829CB907F00C1C1AD /* gui */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = gui;
+			sourceTree = "<group>";
+		};
+		A054E47929CB908D00C1C1AD /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				A054E47A29CB92C500C1C1AD /* NeuVC.swift */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		A054E47C29CB97D700C1C1AD /* theme */ = {
+			isa = PBXGroup;
+			children = (
+				A054E47D29CB97EE00C1C1AD /* Theme.swift */,
+				A054E47F29CB983800C1C1AD /* ThemeManager.swift */,
+				A054E48129CB9BCE00C1C1AD /* ThemeType.swift */,
+			);
+			path = theme;
+			sourceTree = "<group>";
+		};
+		A054E48329CBA3D000C1C1AD /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A054E48429CBA3E700C1C1AD /* extensions */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		A054E48429CBA3E700C1C1AD /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A054E48729CBA51100C1C1AD /* UIScrollView+Constraints.swift */,
+				A054E48529CBA40300C1C1AD /* UIView+Constraints.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +328,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A054E42C29CB805B00C1C1AD /* ios_poc.xcdatamodeld in Sources */,
-				A054E42629CB805B00C1C1AD /* ViewController.swift in Sources */,
+				A054E42629CB805B00C1C1AD /* RootViewController.swift in Sources */,
 				A054E42229CB805B00C1C1AD /* AppDelegate.swift in Sources */,
+				A054E48629CBA40300C1C1AD /* UIView+Constraints.swift in Sources */,
+				A054E47E29CB97EE00C1C1AD /* Theme.swift in Sources */,
+				A054E47B29CB92C500C1C1AD /* NeuVC.swift in Sources */,
+				A054E48229CB9BCE00C1C1AD /* ThemeType.swift in Sources */,
 				A054E42429CB805B00C1C1AD /* SceneDelegate.swift in Sources */,
+				A054E48829CBA51100C1C1AD /* UIScrollView+Constraints.swift in Sources */,
+				A054E48029CB983800C1C1AD /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
