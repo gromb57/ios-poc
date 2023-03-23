@@ -16,6 +16,7 @@ struct Theme {
 
     func applyAppearance() {
         UIWindow.appearance().tintColor = self.mainColor
-        UIView.appearance(whenContainedInInstancesOf: [UIViewController.self]).backgroundColor = self.bgColor
+        
+        NeuControl.appearance().backgroundColor = self.bgColor
     }
 }

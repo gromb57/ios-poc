@@ -11,17 +11,17 @@ import UIKit
 extension UIView {
     /// Constraint self to another view
     /// - Parameter toView: UIView? = nil, if nil use superview
-    func constraint(_ toView: UIView? = nil) {
+    func constraint(_ toView: UIView? = nil, inset: UIEdgeInsets = .zero) {
         guard let toView = toView ?? self.superview else {
             return
         }
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            self.topAnchor.constraint(equalTo: toView.topAnchor),
-            self.bottomAnchor.constraint(equalTo: toView.bottomAnchor),
-            self.leadingAnchor.constraint(equalTo: toView.leadingAnchor),
-            self.trailingAnchor.constraint(equalTo: toView.trailingAnchor)
+            self.topAnchor.constraint(equalTo: toView.topAnchor, constant: inset.top),
+            self.bottomAnchor.constraint(equalTo: toView.bottomAnchor, constant: -inset.bottom),
+            self.leadingAnchor.constraint(equalTo: toView.leadingAnchor, constant: inset.left),
+            self.trailingAnchor.constraint(equalTo: toView.trailingAnchor, constant: -inset.right)
         ])
     }
 
