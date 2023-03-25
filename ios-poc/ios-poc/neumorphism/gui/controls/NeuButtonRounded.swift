@@ -1,5 +1,5 @@
 //
-//  NeuButtonRouned.swift
+//  NeuButtonRounded.swift
 //  ios-poc
 //
 //  Created by Jerome Bach on 23/03/2023.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class NeuButtonRouned: NeuButton {
+class NeuButtonRounded: NeuButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A01B3C4D29CF4DEA00BEFEA7 /* NeuTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C4C29CF4DEA00BEFEA7 /* NeuTextField.swift */; };
+		A01B3C4F29CF4E3C00BEFEA7 /* NeuSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C4E29CF4E3C00BEFEA7 /* NeuSegmentedControl.swift */; };
+		A01B3C5129CF4E8200BEFEA7 /* NeuSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C5029CF4E8200BEFEA7 /* NeuSwitch.swift */; };
+		A01B3C5329CF4E9800BEFEA7 /* NeuCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C5229CF4E9800BEFEA7 /* NeuCheckbox.swift */; };
+		A01B3C5529CF4EA400BEFEA7 /* NeuRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C5429CF4EA400BEFEA7 /* NeuRadio.swift */; };
+		A01B3C5729CF503100BEFEA7 /* NeuSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C5629CF503100BEFEA7 /* NeuSlider.swift */; };
+		A01B3C5929CF505D00BEFEA7 /* NeuProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C5829CF505D00BEFEA7 /* NeuProgressBar.swift */; };
 		A054E42229CB805B00C1C1AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E42129CB805B00C1C1AD /* AppDelegate.swift */; };
 		A054E42429CB805B00C1C1AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E42329CB805B00C1C1AD /* SceneDelegate.swift */; };
 		A054E42629CB805B00C1C1AD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E42529CB805B00C1C1AD /* RootViewController.swift */; };
@@ -27,7 +34,9 @@
 		A054E48D29CCDB3A00C1C1AD /* NeuControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E48C29CCDB3A00C1C1AD /* NeuControl.swift */; };
 		A054E49029CCDC2800C1C1AD /* UIViewCodingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E48F29CCDC2800C1C1AD /* UIViewCodingProtocol.swift */; };
 		A054E49229CCDDCB00C1C1AD /* NeuLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E49129CCDDCB00C1C1AD /* NeuLayer.swift */; };
-		A054E49529CD07F500C1C1AD /* NeuButtonRouned.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E49429CD07F500C1C1AD /* NeuButtonRouned.swift */; };
+		A054E49529CD07F500C1C1AD /* NeuButtonRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E49429CD07F500C1C1AD /* NeuButtonRounded.swift */; };
+		A054E49829CF329B00C1C1AD /* NeuLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E49729CF329B00C1C1AD /* NeuLabel.swift */; };
+		A054E49A29CF37EA00C1C1AD /* NeuCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E49929CF37EA00C1C1AD /* NeuCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +57,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A01B3C4C29CF4DEA00BEFEA7 /* NeuTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuTextField.swift; sourceTree = "<group>"; };
+		A01B3C4E29CF4E3C00BEFEA7 /* NeuSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuSegmentedControl.swift; sourceTree = "<group>"; };
+		A01B3C5029CF4E8200BEFEA7 /* NeuSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuSwitch.swift; sourceTree = "<group>"; };
+		A01B3C5229CF4E9800BEFEA7 /* NeuCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuCheckbox.swift; sourceTree = "<group>"; };
+		A01B3C5429CF4EA400BEFEA7 /* NeuRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuRadio.swift; sourceTree = "<group>"; };
+		A01B3C5629CF503100BEFEA7 /* NeuSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuSlider.swift; sourceTree = "<group>"; };
+		A01B3C5829CF505D00BEFEA7 /* NeuProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuProgressBar.swift; sourceTree = "<group>"; };
 		A054E41E29CB805B00C1C1AD /* ios-poc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-poc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A054E42129CB805B00C1C1AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A054E42329CB805B00C1C1AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +88,9 @@
 		A054E48C29CCDB3A00C1C1AD /* NeuControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuControl.swift; sourceTree = "<group>"; };
 		A054E48F29CCDC2800C1C1AD /* UIViewCodingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewCodingProtocol.swift; sourceTree = "<group>"; };
 		A054E49129CCDDCB00C1C1AD /* NeuLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuLayer.swift; sourceTree = "<group>"; };
-		A054E49429CD07F500C1C1AD /* NeuButtonRouned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuButtonRouned.swift; sourceTree = "<group>"; };
+		A054E49429CD07F500C1C1AD /* NeuButtonRounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuButtonRounded.swift; sourceTree = "<group>"; };
+		A054E49729CF329B00C1C1AD /* NeuLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuLabel.swift; sourceTree = "<group>"; };
+		A054E49929CF37EA00C1C1AD /* NeuCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +187,7 @@
 			children = (
 				A054E48929CCC7F200C1C1AD /* controls */,
 				A054E49329CCF6E300C1C1AD /* layers */,
+				A054E49629CF328500C1C1AD /* views */,
 			);
 			path = gui;
 			sourceTree = "<group>";
@@ -213,8 +232,14 @@
 			isa = PBXGroup;
 			children = (
 				A054E48A29CCC81E00C1C1AD /* NeuButton.swift */,
-				A054E49429CD07F500C1C1AD /* NeuButtonRouned.swift */,
+				A054E49429CD07F500C1C1AD /* NeuButtonRounded.swift */,
+				A01B3C5229CF4E9800BEFEA7 /* NeuCheckbox.swift */,
 				A054E48C29CCDB3A00C1C1AD /* NeuControl.swift */,
+				A01B3C5429CF4EA400BEFEA7 /* NeuRadio.swift */,
+				A01B3C4E29CF4E3C00BEFEA7 /* NeuSegmentedControl.swift */,
+				A01B3C5629CF503100BEFEA7 /* NeuSlider.swift */,
+				A01B3C5029CF4E8200BEFEA7 /* NeuSwitch.swift */,
+				A01B3C4C29CF4DEA00BEFEA7 /* NeuTextField.swift */,
 			);
 			path = controls;
 			sourceTree = "<group>";
@@ -233,6 +258,16 @@
 				A054E49129CCDDCB00C1C1AD /* NeuLayer.swift */,
 			);
 			path = layers;
+			sourceTree = "<group>";
+		};
+		A054E49629CF328500C1C1AD /* views */ = {
+			isa = PBXGroup;
+			children = (
+				A054E49929CF37EA00C1C1AD /* NeuCard.swift */,
+				A054E49729CF329B00C1C1AD /* NeuLabel.swift */,
+				A01B3C5829CF505D00BEFEA7 /* NeuProgressBar.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,8 +401,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A054E49529CD07F500C1C1AD /* NeuButtonRouned.swift in Sources */,
+				A054E49529CD07F500C1C1AD /* NeuButtonRounded.swift in Sources */,
+				A01B3C5929CF505D00BEFEA7 /* NeuProgressBar.swift in Sources */,
+				A054E49829CF329B00C1C1AD /* NeuLabel.swift in Sources */,
+				A01B3C4D29CF4DEA00BEFEA7 /* NeuTextField.swift in Sources */,
 				A054E48D29CCDB3A00C1C1AD /* NeuControl.swift in Sources */,
+				A054E49A29CF37EA00C1C1AD /* NeuCard.swift in Sources */,
+				A01B3C4F29CF4E3C00BEFEA7 /* NeuSegmentedControl.swift in Sources */,
 				A054E42C29CB805B00C1C1AD /* ios_poc.xcdatamodeld in Sources */,
 				A054E49029CCDC2800C1C1AD /* UIViewCodingProtocol.swift in Sources */,
 				A054E42629CB805B00C1C1AD /* RootViewController.swift in Sources */,
@@ -378,6 +418,10 @@
 				A054E47B29CB92C500C1C1AD /* NeuVC.swift in Sources */,
 				A054E48229CB9BCE00C1C1AD /* ThemeType.swift in Sources */,
 				A054E42429CB805B00C1C1AD /* SceneDelegate.swift in Sources */,
+				A01B3C5729CF503100BEFEA7 /* NeuSlider.swift in Sources */,
+				A01B3C5529CF4EA400BEFEA7 /* NeuRadio.swift in Sources */,
+				A01B3C5129CF4E8200BEFEA7 /* NeuSwitch.swift in Sources */,
+				A01B3C5329CF4E9800BEFEA7 /* NeuCheckbox.swift in Sources */,
 				A054E48B29CCC81F00C1C1AD /* NeuButton.swift in Sources */,
 				A054E48829CBA51100C1C1AD /* UIScrollView+Constraints.swift in Sources */,
 				A054E48029CB983800C1C1AD /* ThemeManager.swift in Sources */,

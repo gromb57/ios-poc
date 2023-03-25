@@ -13,6 +13,7 @@ struct Theme {
 
     var mainColor: UIColor = UIColor(named: "theme/light/colors/mainColor") ?? UIColor.purple
     var bgColor: UIColor = UIColor(named: "theme/light/colors/bgColor") ?? UIColor.white
+    var textColor: UIColor = UIColor(named: "theme/light/colors/textColor") ?? UIColor.darkGray
 
     func applyAppearance() {
         UIWindow.appearance().tintColor = self.mainColor

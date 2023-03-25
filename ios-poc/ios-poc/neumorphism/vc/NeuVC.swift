@@ -42,16 +42,46 @@ final class NeuVC: UIViewController {
 
     private func addGuis() {
         let button = NeuButton(frame: .zero)
-        //button.setTitle("Button", for: .normal)
+        button.setTitle("Button", for: .normal)
         button.constraint(size: CGSize(width: CGFloat.nan, height: 44))
         self.addGui(view: button)
         
-        let button2 = NeuButtonRouned(frame: .zero)
-        //button2.setTitle("Button 2", for: .normal)
-        button2.constraint(size: CGSize(width: CGFloat.nan, height: 88))
+        let button2 = NeuButton(frame: .zero)
+        button2.setTitle("Button 2", for: .normal)
+        button2.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        button2.constraint(size: CGSize(width: CGFloat.nan, height: 44))
         self.addGui(view: button2)
+        
+        let button3 = NeuButtonRounded(frame: .zero)
+        button3.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        button3.constraint(size: CGSize(width: CGFloat.nan, height: 88))
+        self.addGui(view: button3)
 
-        let view = UIView()
+        let textField = NeuTextField(frame: .zero)
+        textField.constraint(size: CGSize(width: CGFloat.nan, height: 44))
+        self.addGui(view: textField)
+
+        let checkbox = NeuCheckbox(frame: .zero)
+        checkbox.constraint(size: CGSize(width: CGFloat.nan, height: 44))
+        self.addGui(view: checkbox)
+        
+        let radio = NeuRadio(frame: .zero)
+        radio.constraint(size: CGSize(width: CGFloat.nan, height: 44))
+        self.addGui(view: radio)
+        
+        let segmentedControl = NeuSegmentedControl(frame: .zero)
+        segmentedControl.constraint(size: CGSize(width: CGFloat.nan, height: 44))
+        self.addGui(view: segmentedControl)
+        
+        let aSwitch = NeuSwitch(frame: .zero)
+        aSwitch.constraint(size: CGSize(width: CGFloat.nan, height: 44))
+        self.addGui(view: aSwitch)
+        
+        let slider = NeuSlider(frame: .zero)
+        slider.constraint(size: CGSize(width: CGFloat.nan, height: 44))
+        self.addGui(view: slider)
+
+        let view = NeuCard()
         view.constraint(size: CGSize(width: CGFloat.nan, height: 1024))
         view.backgroundColor = .purple
         self.addGui(view: view)

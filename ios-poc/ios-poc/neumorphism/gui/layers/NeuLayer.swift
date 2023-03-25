@@ -13,17 +13,10 @@ class NeuLayer: CALayer {
         case TopLeft = "Neu-TopLeftName"
         case BottomRight = "Neu-BottomRightName"
 
-        var cgColor: CGColor {
-            switch self {
-            case .TopLeft: return NeuLayer.lightColor.cgColor
-            case .BottomRight: return NeuLayer.darkColor.cgColor
-            }
-        }
-
         var offset: CGFloat {
             switch self {
-            case .TopLeft: return 3
-            case .BottomRight: return -3
+            case .TopLeft: return 1
+            case .BottomRight: return -1
             }
         }
     }
@@ -68,13 +61,13 @@ class NeuLayer: CALayer {
 
     static func applyOutterShadow(_ layer: CALayer) {
         // top left
-        self.applyOutterShadow(layer, corner: Corner.TopLeft)
+        self.applyOutterShadow(layer, corner: Corner.TopLeft, color: NeuLayer.lightColor.cgColor)
 
         // bottom right
-        self.applyOutterShadow(layer, corner: Corner.BottomRight)
+        self.applyOutterShadow(layer, corner: Corner.BottomRight, color: NeuLayer.darkColor.cgColor)
     }
 
-    static func applyOutterShadow(_ layer: CALayer, corner: Corner) {
+    static func applyOutterShadow(_ layer: CALayer, corner: Corner, color: CGColor) {
         var subLayer: CALayer
         if let sub = layer.sublayers?.first(where: { layer in
             return layer.name == corner.rawValue
@@ -87,7 +80,7 @@ class NeuLayer: CALayer {
         }
         subLayer.name = corner.rawValue
         //subLayer.masksToBounds = false
-        subLayer.shadowColor = corner.cgColor
+        subLayer.shadowColor = color
         subLayer.shadowRadius = abs(corner.offset)
         subLayer.shadowOpacity = 1
         subLayer.shadowOffset = CGSize(width: corner.offset, height: corner.offset)
@@ -95,7 +88,11 @@ class NeuLayer: CALayer {
     }
 
     static func applyInnerShadow(_ layer: CALayer) {
-        
+        // top left
+        self.applyOutterShadow(layer, corner: Corner.TopLeft, color: NeuLayer.darkColor.cgColor)
+
+        // bottom right
+        self.applyOutterShadow(layer, corner: Corner.BottomRight, color: NeuLayer.lightColor.cgColor)
     }
 
     // MARK: - Path
