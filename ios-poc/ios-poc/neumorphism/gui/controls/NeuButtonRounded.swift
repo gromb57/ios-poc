@@ -10,8 +10,7 @@ import UIKit
 
 class NeuButtonRounded: NeuButton {
     override func layoutSubviews() {
-        super.layoutSubviews()
-        
         self.layer.cornerRadius = self.bounds.height / 2
+        super.layoutSubviews()
     }
 }

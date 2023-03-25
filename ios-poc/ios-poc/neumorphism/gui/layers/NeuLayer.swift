@@ -33,7 +33,7 @@ class NeuLayer: CALayer {
             layer.frame.origin = .zero
             layer.masksToBounds = false
             if let corner = Corner(rawValue: layer.name ?? "") {
-                layer.shadowPath = type(of: self).path(layer, for: corner).cgPath
+                layer.shadowPath = type(of: self).path(layer, for: corner, offset: layer.shadowOffset).cgPath
             }
         })
     }
@@ -52,6 +52,7 @@ class NeuLayer: CALayer {
         switch state {
         case .highlighted:
             self.applyInnerShadow(layer)
+            layer.borderWidth = 0
         default:
             layer.borderColor = self.borderColor.cgColor
             layer.borderWidth = 1
@@ -76,28 +77,48 @@ class NeuLayer: CALayer {
         } else {
             subLayer = CALayer()
             subLayer.bounds = layer.bounds
+            subLayer.name = corner.rawValue
             layer.insertSublayer(subLayer, below: layer)
         }
-        subLayer.name = corner.rawValue
         //subLayer.masksToBounds = false
         subLayer.shadowColor = color
         subLayer.shadowRadius = abs(corner.offset)
         subLayer.shadowOpacity = 1
         subLayer.shadowOffset = CGSize(width: corner.offset, height: corner.offset)
-        subLayer.shadowPath = self.path(layer, for: corner).cgPath
+        subLayer.shadowPath = self.path(layer, for: corner, offset: subLayer.shadowOffset).cgPath
     }
 
-    static func applyInnerShadow(_ layer: CALayer) {
+    static func applyInnerShadow(_ layer: CALayer, offset: CGFloat? = nil) {
         // top left
-        self.applyOutterShadow(layer, corner: Corner.TopLeft, color: NeuLayer.darkColor.cgColor)
+        self.applyInnerShadow(layer, corner: Corner.TopLeft, color: NeuLayer.darkColor.cgColor, offset: offset ?? Corner.TopLeft.offset)
 
         // bottom right
-        self.applyOutterShadow(layer, corner: Corner.BottomRight, color: NeuLayer.lightColor.cgColor)
+        self.applyInnerShadow(layer, corner: Corner.BottomRight, color: NeuLayer.lightColor.cgColor, offset: offset?.negate() ?? Corner.BottomRight.offset)
+    }
+
+    static func applyInnerShadow(_ layer: CALayer, corner: Corner, color: CGColor, offset: CGFloat) {
+        var subLayer: CALayer
+        if let sub = layer.sublayers?.first(where: { layer in
+            return layer.name == corner.rawValue
+        }) {
+            subLayer = sub
+        } else {
+            subLayer = CALayer()
+            subLayer.bounds = layer.bounds
+            subLayer.name = corner.rawValue
+            layer.insertSublayer(subLayer, below: layer)
+        }
+        //subLayer.masksToBounds = false
+        subLayer.shadowColor = color
+        subLayer.shadowRadius = abs(offset)
+        subLayer.shadowOpacity = 1
+        subLayer.shadowOffset = CGSize(width: offset, height: offset)
+        subLayer.shadowPath = self.path(layer, for: corner, offset: subLayer.shadowOffset).cgPath
     }
 
     // MARK: - Path
-    static func path(_ layer: CALayer, for corner: Corner) -> UIBezierPath {
-        let offset = layer.shadowOffset
+    static func path(_ layer: CALayer, for corner: Corner, offset: CGSize) -> UIBezierPath {
+        let cornerRadius = layer.superlayer?.cornerRadius ?? 0
         let path = UIBezierPath()
         path.move(to: CGPoint(x: layer.bounds.minX, y: layer.bounds.maxY))
         switch corner {

@@ -26,7 +26,7 @@ class NeuButton: NeuControl {
 
     // MARK: - UI
     override func initUI() {
-        self.layer.insertSublayer(self.neuLayer, below: self.layer)
+        self.layer.addSublayer(self.neuLayer)
         self.neuLayer.applyShadow(self.state)
         self.addSubview(self.stackView)
         self.stackView.constraint()
@@ -37,6 +37,7 @@ class NeuButton: NeuControl {
 
         self.neuLayer.bounds = self.layer.bounds
         self.neuLayer.frame.origin = .zero
+        self.neuLayer.cornerRadius = self.layer.cornerRadius
     }
 
     // MARK: - State

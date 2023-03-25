@@ -14,6 +14,7 @@
 		A01B3C5529CF4EA400BEFEA7 /* NeuRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C5429CF4EA400BEFEA7 /* NeuRadio.swift */; };
 		A01B3C5729CF503100BEFEA7 /* NeuSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C5629CF503100BEFEA7 /* NeuSlider.swift */; };
 		A01B3C5929CF505D00BEFEA7 /* NeuProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C5829CF505D00BEFEA7 /* NeuProgressBar.swift */; };
+		A01B3C5B29CFABC900BEFEA7 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C5A29CFABC900BEFEA7 /* CGFloat+Extension.swift */; };
 		A054E42229CB805B00C1C1AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E42129CB805B00C1C1AD /* AppDelegate.swift */; };
 		A054E42429CB805B00C1C1AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E42329CB805B00C1C1AD /* SceneDelegate.swift */; };
 		A054E42629CB805B00C1C1AD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E42529CB805B00C1C1AD /* RootViewController.swift */; };
@@ -64,6 +65,7 @@
 		A01B3C5429CF4EA400BEFEA7 /* NeuRadio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuRadio.swift; sourceTree = "<group>"; };
 		A01B3C5629CF503100BEFEA7 /* NeuSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuSlider.swift; sourceTree = "<group>"; };
 		A01B3C5829CF505D00BEFEA7 /* NeuProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuProgressBar.swift; sourceTree = "<group>"; };
+		A01B3C5A29CFABC900BEFEA7 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
 		A054E41E29CB805B00C1C1AD /* ios-poc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-poc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A054E42129CB805B00C1C1AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A054E42329CB805B00C1C1AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		A054E48429CBA3E700C1C1AD /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A01B3C5A29CFABC900BEFEA7 /* CGFloat+Extension.swift */,
 				A054E48729CBA51100C1C1AD /* UIScrollView+Constraints.swift */,
 				A054E48529CBA40300C1C1AD /* UIView+Constraints.swift */,
 			);
@@ -405,6 +408,7 @@
 				A01B3C5929CF505D00BEFEA7 /* NeuProgressBar.swift in Sources */,
 				A054E49829CF329B00C1C1AD /* NeuLabel.swift in Sources */,
 				A01B3C4D29CF4DEA00BEFEA7 /* NeuTextField.swift in Sources */,
+				A01B3C5B29CFABC900BEFEA7 /* CGFloat+Extension.swift in Sources */,
 				A054E48D29CCDB3A00C1C1AD /* NeuControl.swift in Sources */,
 				A054E49A29CF37EA00C1C1AD /* NeuCard.swift in Sources */,
 				A01B3C4F29CF4E3C00BEFEA7 /* NeuSegmentedControl.swift in Sources */,

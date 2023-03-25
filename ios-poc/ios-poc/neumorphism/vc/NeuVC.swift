@@ -58,6 +58,7 @@ final class NeuVC: UIViewController {
         self.addGui(view: button3)
 
         let textField = NeuTextField(frame: .zero)
+        textField.placeholder = "Input..."
         textField.constraint(size: CGSize(width: CGFloat.nan, height: 44))
         self.addGui(view: textField)
 
