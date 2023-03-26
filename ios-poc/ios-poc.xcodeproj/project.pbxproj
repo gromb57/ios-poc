@@ -15,6 +15,8 @@
 		A01B3C5729CF503100BEFEA7 /* NeuSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C5629CF503100BEFEA7 /* NeuSlider.swift */; };
 		A01B3C5929CF505D00BEFEA7 /* NeuProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C5829CF505D00BEFEA7 /* NeuProgressBar.swift */; };
 		A01B3C5B29CFABC900BEFEA7 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C5A29CFABC900BEFEA7 /* CGFloat+Extension.swift */; };
+		A01B3C5E29D0356E00BEFEA7 /* TrigoCircleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C5D29D0356E00BEFEA7 /* TrigoCircleVC.swift */; };
+		A01B3C6029D07B0700BEFEA7 /* UIBezierPath+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B3C5F29D07B0700BEFEA7 /* UIBezierPath+Debug.swift */; };
 		A054E42229CB805B00C1C1AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E42129CB805B00C1C1AD /* AppDelegate.swift */; };
 		A054E42429CB805B00C1C1AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E42329CB805B00C1C1AD /* SceneDelegate.swift */; };
 		A054E42629CB805B00C1C1AD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E42529CB805B00C1C1AD /* RootViewController.swift */; };
@@ -66,6 +68,8 @@
 		A01B3C5629CF503100BEFEA7 /* NeuSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuSlider.swift; sourceTree = "<group>"; };
 		A01B3C5829CF505D00BEFEA7 /* NeuProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuProgressBar.swift; sourceTree = "<group>"; };
 		A01B3C5A29CFABC900BEFEA7 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		A01B3C5D29D0356E00BEFEA7 /* TrigoCircleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrigoCircleVC.swift; sourceTree = "<group>"; };
+		A01B3C5F29D07B0700BEFEA7 /* UIBezierPath+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Debug.swift"; sourceTree = "<group>"; };
 		A054E41E29CB805B00C1C1AD /* ios-poc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-poc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A054E42129CB805B00C1C1AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A054E42329CB805B00C1C1AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A01B3C5C29D0353700BEFEA7 /* cg */ = {
+			isa = PBXGroup;
+			children = (
+				A01B3C5D29D0356E00BEFEA7 /* TrigoCircleVC.swift */,
+			);
+			path = cg;
+			sourceTree = "<group>";
+		};
 		A054E41529CB805B00C1C1AD = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +157,7 @@
 			children = (
 				A054E42129CB805B00C1C1AD /* AppDelegate.swift */,
 				A054E42D29CB805E00C1C1AD /* Assets.xcassets */,
+				A01B3C5C29D0353700BEFEA7 /* cg */,
 				A054E43229CB805E00C1C1AD /* Info.plist */,
 				A054E42A29CB805B00C1C1AD /* ios_poc.xcdatamodeld */,
 				A054E42F29CB805E00C1C1AD /* LaunchScreen.storyboard */,
@@ -225,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				A01B3C5A29CFABC900BEFEA7 /* CGFloat+Extension.swift */,
+				A01B3C5F29D07B0700BEFEA7 /* UIBezierPath+Debug.swift */,
 				A054E48729CBA51100C1C1AD /* UIScrollView+Constraints.swift */,
 				A054E48529CBA40300C1C1AD /* UIView+Constraints.swift */,
 			);
@@ -411,9 +425,11 @@
 				A01B3C5B29CFABC900BEFEA7 /* CGFloat+Extension.swift in Sources */,
 				A054E48D29CCDB3A00C1C1AD /* NeuControl.swift in Sources */,
 				A054E49A29CF37EA00C1C1AD /* NeuCard.swift in Sources */,
+				A01B3C6029D07B0700BEFEA7 /* UIBezierPath+Debug.swift in Sources */,
 				A01B3C4F29CF4E3C00BEFEA7 /* NeuSegmentedControl.swift in Sources */,
 				A054E42C29CB805B00C1C1AD /* ios_poc.xcdatamodeld in Sources */,
 				A054E49029CCDC2800C1C1AD /* UIViewCodingProtocol.swift in Sources */,
+				A01B3C5E29D0356E00BEFEA7 /* TrigoCircleVC.swift in Sources */,
 				A054E42629CB805B00C1C1AD /* RootViewController.swift in Sources */,
 				A054E42229CB805B00C1C1AD /* AppDelegate.swift in Sources */,
 				A054E48629CBA40300C1C1AD /* UIView+Constraints.swift in Sources */,

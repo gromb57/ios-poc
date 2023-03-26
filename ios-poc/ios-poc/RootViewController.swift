@@ -23,6 +23,9 @@ final class RootViewController: UITableViewController {
     let dataSource: [Section] = [
         Section(title: "Neumorphism", rows: [
             Row(title: "GUI", controller: NeuVC.self)
+        ]),
+        Section(title: "Core Graphics", rows: [
+            Row(title: "Trigonometric circle", controller: TrigoCircleVC.self)
         ])
     ]
     

@@ -53,9 +53,37 @@ final class NeuVC: UIViewController {
         self.addGui(view: button2)
         
         let button3 = NeuButtonRounded(frame: .zero)
+        button3.ratio = 4
         button3.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         button3.constraint(size: CGSize(width: CGFloat.nan, height: 88))
         self.addGui(view: button3)
+
+        let card = NeuCard(frame: .zero)
+        card.constraint(size: CGSize(width: CGFloat.nan, height: 44))
+        self.addGui(view: card)
+        let buttonStack = UIStackView()
+        buttonStack.alignment = .center
+        buttonStack.axis = .horizontal
+        buttonStack.distribution = .equalCentering
+        buttonStack.spacing = 6
+        card.addSubview(buttonStack)
+        buttonStack.constraint(inset: UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6))
+        let button4 = NeuButtonRounded(frame: .zero)
+        button4.setImage(UIImage(systemName: "backward.fill"), for: .normal)
+        button4.constraint(size: CGSize(width: 32, height: 32))
+        buttonStack.addArrangedSubview(button4)
+        let button5 = NeuButtonRounded(frame: .zero)
+        button5.setImage(UIImage(systemName: "stop.fill"), for: .normal)
+        button5.constraint(size: CGSize(width: 32, height: 32))
+        buttonStack.addArrangedSubview(button5)
+        let button6 = NeuButtonRounded(frame: .zero)
+        button6.setImage(UIImage(systemName: "play.fill"), for: .normal)
+        button6.constraint(size: CGSize(width: 32, height: 32))
+        buttonStack.addArrangedSubview(button6)
+        let button7 = NeuButtonRounded(frame: .zero)
+        button7.setImage(UIImage(systemName: "forward.fill"), for: .normal)
+        button7.constraint(size: CGSize(width: 32, height: 32))
+        buttonStack.addArrangedSubview(button7)
 
         let textField = NeuTextField(frame: .zero)
         textField.placeholder = "Input..."

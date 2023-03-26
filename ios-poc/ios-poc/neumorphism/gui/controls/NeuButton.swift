@@ -67,6 +67,7 @@ class NeuButton: NeuControl {
         stackView.alignment = UIStackView.Alignment.fill
         stackView.axis = NSLayoutConstraint.Axis.horizontal
         stackView.distribution = UIStackView.Distribution.fillProportionally
+        stackView.spacing = 6
         return stackView
     }()
 
@@ -104,7 +105,7 @@ class NeuButton: NeuControl {
    }
 
     func setImage(_ image: UIImage?, for state: UIControl.State) {
-        self.images[state.rawValue] = image
+        self.images[state.rawValue] = image?.withAlignmentRectInsets(UIEdgeInsets(top: -6, left: -6, bottom: -6, right: -6))
         self.imageView?.image = self.imageForState(state)
     }
 }
