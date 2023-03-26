@@ -10,7 +10,7 @@ import UIKit
 
 class NeuButton: NeuControl {
 
-    private var neuLayer = NeuLayer()
+    private let neuLayer = NeuLayer()
 
     override var isEnabled: Bool {
         didSet {

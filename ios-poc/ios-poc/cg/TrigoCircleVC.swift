@@ -131,8 +131,10 @@ class TrigoCircleVC: UIViewController, UIActionSheetDelegate {
         }), for: UIControl.Event.touchUpInside)
         stackView.addArrangedSubview(endAngleButton)
 
-        let aSwitch = UISwitch(frame: CGRect.zero)
+        let aSwitch = NeuSwitch(frame: CGRect.zero)
+        aSwitch.cornerRadius = 22
         aSwitch.isOn = self.clockwise
+        aSwitch.constraint(size: CGSize(width: CGFloat.nan, height: 44))
         aSwitch.addAction(UIAction(handler: { _ in
             self.clockwise = aSwitch.isOn
         }), for: UIControl.Event.valueChanged)
