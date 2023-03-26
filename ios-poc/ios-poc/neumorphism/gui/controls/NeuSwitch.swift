@@ -52,10 +52,10 @@ class NeuSwitch: NeuControl {
         self.neuLayer.cornerRadius = self.layer.cornerRadius
         self.neuLayer.backgroundColor = self.isOn ? self.tintColor.cgColor : CGColor(gray: 0, alpha: 0)
         
-        let dim: CGFloat = self.layer.bounds.height - inset * 2
-        self.switchLayer.bounds = CGRect(origin: .zero, size: CGSize(width: dim, height: dim))
+        let innerDim: CGFloat = self.layer.bounds.height - inset * 2
+        self.switchLayer.bounds = CGRect(origin: .zero, size: CGSize(width: innerDim, height: innerDim))
         if self.isOn {
-            self.switchLayer.frame.origin = CGPoint(x: inset * 3 + dim, y: inset)
+            self.switchLayer.frame.origin = CGPoint(x: inset * 3 + innerDim, y: inset)
         } else {
             self.switchLayer.frame.origin = CGPoint(x: inset, y: inset)
         }
