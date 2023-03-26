@@ -41,6 +41,19 @@ class NeuLayer: CALayer {
     func applyShadow(_ state: UIControl.State = .normal) {
         type(of: self).applyShadow(self, for: state)
     }
+
+    func removeShadow() {
+        if let layer = self.sublayers?.first(where: { layer in
+            return layer.name == Corner.TopLeft.rawValue
+        }) {
+            layer.shadowOpacity = 0
+        }
+        if let layer = self.sublayers?.first(where: { layer in
+            return layer.name == Corner.BottomRight.rawValue
+        }) {
+            layer.shadowOpacity = 0
+        }
+    }
     
     // MARK: - Statics Properties
     static let lightColor = UIColor.white

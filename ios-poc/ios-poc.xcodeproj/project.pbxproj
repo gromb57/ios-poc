@@ -40,6 +40,7 @@
 		A054E49529CD07F500C1C1AD /* NeuButtonRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E49429CD07F500C1C1AD /* NeuButtonRounded.swift */; };
 		A054E49829CF329B00C1C1AD /* NeuLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E49729CF329B00C1C1AD /* NeuLabel.swift */; };
 		A054E49A29CF37EA00C1C1AD /* NeuCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E49929CF37EA00C1C1AD /* NeuCard.swift */; };
+		A0882DC129D0ECD700CF297A /* NeuSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0882DC029D0ECD700CF297A /* NeuSegment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		A054E49429CD07F500C1C1AD /* NeuButtonRounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuButtonRounded.swift; sourceTree = "<group>"; };
 		A054E49729CF329B00C1C1AD /* NeuLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuLabel.swift; sourceTree = "<group>"; };
 		A054E49929CF37EA00C1C1AD /* NeuCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuCard.swift; sourceTree = "<group>"; };
+		A0882DC029D0ECD700CF297A /* NeuSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuSegment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 				A01B3C5229CF4E9800BEFEA7 /* NeuCheckbox.swift */,
 				A054E48C29CCDB3A00C1C1AD /* NeuControl.swift */,
 				A01B3C5429CF4EA400BEFEA7 /* NeuRadio.swift */,
+				A0882DC029D0ECD700CF297A /* NeuSegment.swift */,
 				A01B3C4E29CF4E3C00BEFEA7 /* NeuSegmentedControl.swift */,
 				A01B3C5629CF503100BEFEA7 /* NeuSlider.swift */,
 				A01B3C5029CF4E8200BEFEA7 /* NeuSwitch.swift */,
@@ -420,6 +423,7 @@
 			files = (
 				A054E49529CD07F500C1C1AD /* NeuButtonRounded.swift in Sources */,
 				A01B3C5929CF505D00BEFEA7 /* NeuProgressBar.swift in Sources */,
+				A0882DC129D0ECD700CF297A /* NeuSegment.swift in Sources */,
 				A054E49829CF329B00C1C1AD /* NeuLabel.swift in Sources */,
 				A01B3C4D29CF4DEA00BEFEA7 /* NeuTextField.swift in Sources */,
 				A01B3C5B29CFABC900BEFEA7 /* CGFloat+Extension.swift in Sources */,

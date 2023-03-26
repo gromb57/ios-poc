@@ -99,6 +99,11 @@ final class NeuVC: UIViewController {
         self.addGui(view: radio)
         
         let segmentedControl = NeuSegmentedControl(frame: .zero)
+        segmentedControl.numberOfSegments = 4
+        segmentedControl.setTitle("Segment 1", for: 0)
+        segmentedControl.setTitle("Segment 2", for: 1)
+        segmentedControl.setTitle("Segment 3", for: 2)
+        segmentedControl.setTitle("Segment 4", for: 3)
         segmentedControl.constraint(size: CGSize(width: CGFloat.nan, height: 44))
         self.addGui(view: segmentedControl)
         
