@@ -20,7 +20,7 @@ class NeuSegment: NeuControl {
 
     var isOn: Bool = false {
         didSet {
-            self.layoutSubviews()
+            self.setNeedsLayout()
             self.sendActions(for: UIControl.Event.valueChanged)
         }
     }

@@ -11,6 +11,9 @@ import UIKit
 class NeuProgressBar: UIView, UIViewCodingProtocol {
     
     private var neuLayer = NeuLayer()
+    private var progressLayer = CALayer()
+
+    var inset: CGFloat = 4
 
     // MARK: - UI
     required override init(frame: CGRect) {
@@ -28,11 +31,16 @@ class NeuProgressBar: UIView, UIViewCodingProtocol {
         self.neuLayer.bounds = self.layer.bounds
         self.neuLayer.frame.origin = .zero
         self.neuLayer.cornerRadius = self.layer.cornerRadius
+        self.progressLayer.cornerRadius = self.neuLayer.cornerRadius - self.inset
+        self.progressLayer.bounds = CGRect(origin: .zero, size: CGSize(width: (self.layer.bounds.width - self.inset * 2) * CGFloat(self.progress), height: self.layer.bounds.height - self.inset * 2))
+        self.progressLayer.frame.origin = CGPoint(x: self.inset, y: self.inset)
     }
 
     func initUI() {
         self.layer.insertSublayer(self.neuLayer, below: self.layer)
         self.neuLayer.applyShadow()
+        self.layer.insertSublayer(self.progressLayer, above: self.neuLayer)
+        self.progressLayer.backgroundColor = self.tintColor.cgColor
     }
 
     // MARK: - Progress
@@ -44,6 +52,7 @@ class NeuProgressBar: UIView, UIViewCodingProtocol {
             } else if self.progress > 1 {
                 self.progress = 1
             }
+            self.setNeedsLayout()
         }
     }
 }

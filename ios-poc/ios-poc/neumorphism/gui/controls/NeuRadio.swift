@@ -20,13 +20,13 @@ class NeuRadio: NeuControl {
     }
     var inset: CGFloat = 4 {
         didSet {
-            self.layoutSubviews()
+            self.setNeedsLayout()
         }
     }
     
     var isOn: Bool = false {
         didSet {
-            self.layoutSubviews()
+            self.setNeedsLayout()
             self.sendActions(for: UIControl.Event.valueChanged)
         }
     }

@@ -12,11 +12,17 @@ final class NeuVC: UIViewController {
 
     var scrollView: UIScrollView!
     var stackView: UIStackView!
+    
+    private var timer: Timer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.initUI()
+    }
+
+    deinit {
+        self.timer?.invalidate()
     }
 
     private func initUI() {
@@ -123,6 +129,11 @@ final class NeuVC: UIViewController {
         progressBar.constraint(size: CGSize(width: CGFloat.nan, height: 16))
         self.addGui(view: progressBar)
         
+        let progressBar2 = NeuProgressBar(frame: .zero)
+        progressBar2.layer.cornerRadius = 8
+        progressBar2.constraint(size: CGSize(width: CGFloat.nan, height: 16))
+        self.addGui(view: progressBar2)
+        
         let slider = NeuSlider(frame: .zero)
         slider.constraint(size: CGSize(width: CGFloat.nan, height: 44))
         self.addGui(view: slider)
@@ -131,6 +142,19 @@ final class NeuVC: UIViewController {
         view.constraint(size: CGSize(width: CGFloat.nan, height: 1024))
         view.backgroundColor = .purple
         self.addGui(view: view)
+        
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            if progressBar.progress == 1 {
+                progressBar.progress = 0
+            } else {
+                progressBar.progress += 0.1
+            }
+            if progressBar2.progress == 1 {
+                progressBar2.progress = 0
+            } else {
+                progressBar2.progress += 0.1
+            }
+        }
     }
 
     private func addGui(view: UIView) {

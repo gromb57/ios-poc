@@ -19,7 +19,7 @@ class NeuSegmentedControl: NeuControl {
     }
     var inset: CGFloat = 4 {
         didSet {
-            self.layoutSubviews()
+            self.setNeedsLayout()
         }
     }
 
