@@ -138,10 +138,11 @@ final class NeuVC: UIViewController {
         slider.constraint(size: CGSize(width: CGFloat.nan, height: 44))
         self.addGui(view: slider)
 
-        let view = NeuCard()
-        view.constraint(size: CGSize(width: CGFloat.nan, height: 1024))
-        view.backgroundColor = .purple
-        self.addGui(view: view)
+        let card2 = NeuCard()
+        card2.layer.cornerRadius = 16
+        card2.constraint(size: CGSize(width: CGFloat.nan, height: 256))
+        //card2.backgroundColor = .purple.withAlphaComponent(0.1)
+        self.addGui(view: card2)
         
         self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             if progressBar.progress == 1 {

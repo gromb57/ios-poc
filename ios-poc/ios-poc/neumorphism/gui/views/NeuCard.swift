@@ -26,4 +26,12 @@ class NeuCard: UIView, UIViewCodingProtocol {
         self.layer.insertSublayer(self.neuLayer, below: self.layer)
         self.neuLayer.applyShadow()
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        self.neuLayer.bounds = self.layer.bounds
+        self.neuLayer.frame.origin = .zero
+        self.neuLayer.cornerRadius = self.layer.cornerRadius
+    }
 }
