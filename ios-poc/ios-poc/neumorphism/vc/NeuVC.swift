@@ -89,6 +89,14 @@ final class NeuVC: UIViewController {
         textField.placeholder = "Input..."
         textField.constraint(size: CGSize(width: CGFloat.nan, height: 44))
         self.addGui(view: textField)
+        
+        let textField2 = NeuTextField(frame: .zero)
+        textField2.placeholder = "Input2..."
+        textField2.layer.cornerRadius = 22
+        textField2.insetDx = 24
+        textField2.setRightImage(image: UIImage(systemName: "magnifyingglass"))
+        textField2.constraint(size: CGSize(width: CGFloat.nan, height: 44))
+        self.addGui(view: textField2)
 
         let checkbox = NeuCheckbox(frame: .zero)
         checkbox.constraint(size: CGSize(width: CGFloat.nan, height: 44))
@@ -110,6 +118,10 @@ final class NeuVC: UIViewController {
         let aSwitch = NeuSwitch(frame: .zero)
         aSwitch.constraint(size: CGSize(width: CGFloat.nan, height: 44))
         self.addGui(view: aSwitch)
+        
+        let progressBar = NeuProgressBar(frame: .zero)
+        progressBar.constraint(size: CGSize(width: CGFloat.nan, height: 16))
+        self.addGui(view: progressBar)
         
         let slider = NeuSlider(frame: .zero)
         slider.constraint(size: CGSize(width: CGFloat.nan, height: 44))

@@ -10,6 +10,8 @@ import UIKit
 
 class NeuTextField: UITextField, UIViewCodingProtocol {
     
+    var insetDx: CGFloat = 16
+    var insetDy: CGFloat = 4
     private var neuLayer = NeuLayer()
 
     // MARK: - Init
@@ -48,11 +50,26 @@ class NeuTextField: UITextField, UIViewCodingProtocol {
 
     /// placeholder position
     override func textRect(forBounds bounds: CGRect) -> CGRect {
-        return CGRectInset(bounds, 8, 4)
+        return CGRectInset(bounds, self.insetDx, self.insetDy)
     }
 
     /// text position
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return CGRectInset(bounds, 8, 4)
+        var rect = CGRectInset(bounds, self.insetDx, self.insetDy)
+        rect.size.width -= (self.rightView?.bounds.width ?? 0)
+        return rect
+    }
+
+    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+        var rect = super.rightViewRect(forBounds: bounds)
+        rect.origin.x = bounds.width - (self.rightView?.bounds.width ?? 0) - self.insetDx / 2
+        return rect
+    }
+
+    func setRightImage(image: UIImage?) {
+        self.rightViewMode = .always
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = UIView.ContentMode.scaleAspectFill
+        self.rightView = imageView
     }
 }
