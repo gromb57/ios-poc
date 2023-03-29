@@ -137,6 +137,17 @@ final class NeuVC: UIViewController {
         let slider = NeuSlider(frame: .zero)
         slider.constraint(size: CGSize(width: CGFloat.nan, height: 44))
         self.addGui(view: slider)
+        
+        let slider2 = NeuSlider(frame: .zero)
+        slider2.layer.cornerRadius = 12
+        slider2.constraint(size: CGSize(width: CGFloat.nan, height: 24))
+        self.addGui(view: slider2)
+        
+        let slider3 = NeuSlider(frame: .zero)
+        slider3.layer.cornerRadius = 12
+        slider3.thumbAspectRatio = 2
+        slider3.constraint(size: CGSize(width: CGFloat.nan, height: 24))
+        self.addGui(view: slider3)
 
         let card2 = NeuCard()
         card2.layer.cornerRadius = 16

@@ -15,6 +15,8 @@ class NeuSlider: UIControl, UIViewCodingProtocol {
     private let thumbLayer = NeuLayer()
 
     var inset: CGFloat = 4
+    var thumbAspectRatio: CGFloat = 1
+    private let thumbOffset: CGFloat = 12.0
 
     // MARK: - UI
     required override init(frame: CGRect) {
@@ -54,17 +56,18 @@ class NeuSlider: UIControl, UIViewCodingProtocol {
     
     private func updateThumbStyle() {
         let dim = min(self.layer.bounds.width, self.layer.bounds.height)
-        self.thumbLayer.bounds = CGRect(origin: .zero, size: CGSize(width: dim, height: dim))
+        self.thumbLayer.bounds = CGRect(origin: .zero, size: CGSize(width: dim * self.thumbAspectRatio, height: dim))
         self.thumbLayer.applyShadow()
         self.thumbLayer.backgroundColor = self.thumbColor?.cgColor
+        self.thumbLayer.cornerRadius = self.layer.cornerRadius
     }
     
     private func updateThumbPosition() {
         let thumbRadius: CGFloat = self.thumbLayer.bounds.width
-        let thumbOffset: CGFloat = 12.0
-        let trackWidth = bounds.width - thumbRadius
-        let thumbPosition = thumbOffset + (self.value - self.minimumValue) * trackWidth / (self.maximumValue - self.minimumValue)
-        self.thumbLayer.position = CGPoint(x: thumbPosition, y: bounds.midY)
+        let trackWidth = self.layer.bounds.width - thumbRadius
+        let thumbPosition = self.thumbOffset  + (self.value - self.minimumValue) * trackWidth / (self.maximumValue - self.minimumValue)
+        //self.thumbLayer.position = CGPoint(x: thumbPosition, y: bounds.midY)
+        self.thumbLayer.frame.origin = CGPoint(x: thumbPosition - self.inset * 2, y: 0)
     }
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
@@ -74,8 +77,7 @@ class NeuSlider: UIControl, UIViewCodingProtocol {
     override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         let touchLocation = touch.location(in: self)
         let thumbRadius: CGFloat = self.thumbLayer.bounds.width
-        let thumbOffset: CGFloat = 12.0
-        let trackWidth = bounds.width - thumbOffset - thumbRadius
+        let trackWidth = bounds.width - self.thumbOffset - thumbRadius
         let newValue = minimumValue + (self.maximumValue - self.minimumValue) * (touchLocation.x - thumbOffset) / trackWidth
         self.value = max(min(newValue, self.maximumValue), self.minimumValue)
         return true
