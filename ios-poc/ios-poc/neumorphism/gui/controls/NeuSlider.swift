@@ -82,14 +82,23 @@ class NeuSlider: UIControl, UIViewCodingProtocol {
         self.value = max(min(newValue, self.maximumValue), self.minimumValue)
         return true
     }
+
+    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        if !self.isContinuous {
+            sendActions(for: .valueChanged)
+        }
+    }
     
     // MARK: - Slider
     var minimumValue: CGFloat = 0
     var maximumValue: CGFloat = 1
+    var isContinuous: Bool = true
     var value: CGFloat = 0.5 {
         didSet {
             self.setNeedsLayout()
-            sendActions(for: .valueChanged)
+            if self.isContinuous {
+                sendActions(for: .valueChanged)
+            }
         }
     }
     var thumbColor: UIColor? = UIColor.white

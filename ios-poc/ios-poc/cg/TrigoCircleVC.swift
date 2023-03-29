@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TrigoCircleVC: UIViewController, UIActionSheetDelegate {
+final class TrigoCircleVC: UIViewController, UIActionSheetDelegate {
     enum Angle {
         case start
         case end

@@ -24,3 +24,9 @@ Source : https://stackoverflow.com/a/40424891
 ![Trigo 1](/readme/img/trigovc_1.png?raw=true "Trigo 1")
 ![Trigo 2](/readme/img/trigovc_2.png?raw=true "Trigo 2")
 ![Trigo 3](/readme/img/trigovc_3.png?raw=true "Trigo 3")
+
+### Examples
+
+#### Calculator
+
+![Calculator](/readme/img/calculator.png?raw=true "Calculator")

@@ -40,6 +40,8 @@
 		A054E49529CD07F500C1C1AD /* NeuButtonRounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E49429CD07F500C1C1AD /* NeuButtonRounded.swift */; };
 		A054E49829CF329B00C1C1AD /* NeuLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E49729CF329B00C1C1AD /* NeuLabel.swift */; };
 		A054E49A29CF37EA00C1C1AD /* NeuCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E49929CF37EA00C1C1AD /* NeuCard.swift */; };
+		A07FDB1429D4B5CF00253CDF /* MusicPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FDB1329D4B5CF00253CDF /* MusicPlayerVC.swift */; };
+		A07FDB1629D4B60000253CDF /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FDB1529D4B60000253CDF /* CalculatorVC.swift */; };
 		A0882DC129D0ECD700CF297A /* NeuSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0882DC029D0ECD700CF297A /* NeuSegment.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +100,8 @@
 		A054E49429CD07F500C1C1AD /* NeuButtonRounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuButtonRounded.swift; sourceTree = "<group>"; };
 		A054E49729CF329B00C1C1AD /* NeuLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuLabel.swift; sourceTree = "<group>"; };
 		A054E49929CF37EA00C1C1AD /* NeuCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuCard.swift; sourceTree = "<group>"; };
+		A07FDB1329D4B5CF00253CDF /* MusicPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerVC.swift; sourceTree = "<group>"; };
+		A07FDB1529D4B60000253CDF /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		A0882DC029D0ECD700CF297A /* NeuSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuSegment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +164,7 @@
 				A054E42129CB805B00C1C1AD /* AppDelegate.swift */,
 				A054E42D29CB805E00C1C1AD /* Assets.xcassets */,
 				A01B3C5C29D0353700BEFEA7 /* cg */,
+				A07FDB1229D4B59900253CDF /* examples */,
 				A054E43229CB805E00C1C1AD /* Info.plist */,
 				A054E42A29CB805B00C1C1AD /* ios_poc.xcdatamodeld */,
 				A054E42F29CB805E00C1C1AD /* LaunchScreen.storyboard */,
@@ -288,6 +293,15 @@
 				A01B3C5829CF505D00BEFEA7 /* NeuProgressBar.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		A07FDB1229D4B59900253CDF /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				A07FDB1529D4B60000253CDF /* CalculatorVC.swift */,
+				A07FDB1329D4B5CF00253CDF /* MusicPlayerVC.swift */,
+			);
+			path = examples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A054E49529CD07F500C1C1AD /* NeuButtonRounded.swift in Sources */,
+				A07FDB1429D4B5CF00253CDF /* MusicPlayerVC.swift in Sources */,
 				A01B3C5929CF505D00BEFEA7 /* NeuProgressBar.swift in Sources */,
 				A0882DC129D0ECD700CF297A /* NeuSegment.swift in Sources */,
 				A054E49829CF329B00C1C1AD /* NeuLabel.swift in Sources */,
@@ -440,6 +455,7 @@
 				A054E49229CCDDCB00C1C1AD /* NeuLayer.swift in Sources */,
 				A054E47E29CB97EE00C1C1AD /* Theme.swift in Sources */,
 				A054E47B29CB92C500C1C1AD /* NeuVC.swift in Sources */,
+				A07FDB1629D4B60000253CDF /* CalculatorVC.swift in Sources */,
 				A054E48229CB9BCE00C1C1AD /* ThemeType.swift in Sources */,
 				A054E42429CB805B00C1C1AD /* SceneDelegate.swift in Sources */,
 				A01B3C5729CF503100BEFEA7 /* NeuSlider.swift in Sources */,
