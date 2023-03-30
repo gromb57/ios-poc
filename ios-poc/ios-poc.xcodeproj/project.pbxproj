@@ -42,6 +42,7 @@
 		A054E49A29CF37EA00C1C1AD /* NeuCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054E49929CF37EA00C1C1AD /* NeuCard.swift */; };
 		A07FDB1429D4B5CF00253CDF /* MusicPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FDB1329D4B5CF00253CDF /* MusicPlayerVC.swift */; };
 		A07FDB1629D4B60000253CDF /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FDB1529D4B60000253CDF /* CalculatorVC.swift */; };
+		A07FDB1829D6055D00253CDF /* NeuImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FDB1729D6055D00253CDF /* NeuImageView.swift */; };
 		A0882DC129D0ECD700CF297A /* NeuSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0882DC029D0ECD700CF297A /* NeuSegment.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,7 @@
 		A054E49929CF37EA00C1C1AD /* NeuCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuCard.swift; sourceTree = "<group>"; };
 		A07FDB1329D4B5CF00253CDF /* MusicPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerVC.swift; sourceTree = "<group>"; };
 		A07FDB1529D4B60000253CDF /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
+		A07FDB1729D6055D00253CDF /* NeuImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuImageView.swift; sourceTree = "<group>"; };
 		A0882DC029D0ECD700CF297A /* NeuSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuSegment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -289,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				A054E49929CF37EA00C1C1AD /* NeuCard.swift */,
+				A07FDB1729D6055D00253CDF /* NeuImageView.swift */,
 				A054E49729CF329B00C1C1AD /* NeuLabel.swift */,
 				A01B3C5829CF505D00BEFEA7 /* NeuProgressBar.swift */,
 			);
@@ -461,6 +464,7 @@
 				A01B3C5729CF503100BEFEA7 /* NeuSlider.swift in Sources */,
 				A01B3C5529CF4EA400BEFEA7 /* NeuRadio.swift in Sources */,
 				A01B3C5129CF4E8200BEFEA7 /* NeuSwitch.swift in Sources */,
+				A07FDB1829D6055D00253CDF /* NeuImageView.swift in Sources */,
 				A01B3C5329CF4E9800BEFEA7 /* NeuCheckbox.swift in Sources */,
 				A054E48B29CCC81F00C1C1AD /* NeuButton.swift in Sources */,
 				A054E48829CBA51100C1C1AD /* UIScrollView+Constraints.swift in Sources */,

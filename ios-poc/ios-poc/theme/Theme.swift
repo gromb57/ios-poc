@@ -26,12 +26,17 @@ struct Theme {
 
     func applyNeuAppearance() {
         self.applyNeuControlAppearance()
+        self.applyNeuImageViewAppearance()
         self.applyNeuSliderAppearance()
         self.applyNeuTextFieldAppearance()
     }
 
     func applyNeuControlAppearance() {
         NeuControl.appearance().backgroundColor = self.bgColor
+    }
+    
+    func applyNeuImageViewAppearance() {
+        NeuImageView.appearance().backgroundColor = self.bgColor
     }
     
     func applyNeuSliderAppearance() {

@@ -119,7 +119,7 @@ final class CalculatorVC: UIViewController {
 
         let wrap = UIView()
         self.view.addSubview(wrap)
-        wrap.constraint(inset: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
+        wrap.constraintToSafe(inset: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
         
         wrap.addSubview(self.resultLabel)
         self.resultLabel.topAnchor.constraint(equalTo: wrap.topAnchor).isActive = true

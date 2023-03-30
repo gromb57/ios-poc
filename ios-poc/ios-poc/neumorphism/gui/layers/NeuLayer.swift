@@ -129,7 +129,18 @@ class NeuLayer: CALayer {
         subLayer.shadowOffset = CGSize(width: offset, height: offset)
         subLayer.shadowPath = self.path(layer, for: corner, offset: subLayer.shadowOffset).cgPath
     }
-
+    
+    /// Used to apply more shadow to gui
+    /// - Parameters:
+    ///   - layer: CALayer
+    ///   - radius: CGFloat
+    static func applyDarkShadow(_ layer: CALayer, radius: CGFloat = 6) {
+        layer.shadowColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+        layer.shadowRadius = radius
+        layer.shadowOpacity = 0.4
+        layer.shadowOffset = CGSize(width: radius / 2, height: radius / 2)
+    }
+    
     // MARK: - Path
     static func path(_ layer: CALayer, for corner: Corner, offset: CGSize) -> UIBezierPath {
         let cornerRadius = layer.superlayer?.cornerRadius ?? 0
