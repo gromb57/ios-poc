@@ -80,7 +80,12 @@ class NeuSlider: UIControl, UIViewCodingProtocol {
         let thumbRadius: CGFloat = self.thumbLayer.bounds.width
         let trackWidth = bounds.width - self.thumbOffset - thumbRadius
         let newValue = minimumValue + (self.maximumValue - self.minimumValue) * (touchLocation.x - thumbOffset) / trackWidth
+        
+        // disable implicit animations
+        CATransaction.begin()
+        CATransaction.setDisableActions(true)
         self.value = max(min(newValue, self.maximumValue), self.minimumValue)
+        CATransaction.commit()
         return true
     }
 
