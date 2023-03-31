@@ -24,6 +24,12 @@ class NeuButton: NeuControl {
         }
     }
 
+    override var isSelected: Bool {
+        didSet {
+            self.onStateChange()
+        }
+    }
+
     // MARK: - UI
     override func initUI() {
         self.layer.addSublayer(self.neuLayer)
@@ -44,6 +50,14 @@ class NeuButton: NeuControl {
     func onStateChange() {
         self.alpha = self.isEnabled ? 1.0 : 0.5
         self.isUserInteractionEnabled = self.isEnabled
+        self.backgroundColor = self.isSelected ? NeuButton.appearance().tintColor : NeuButton.appearance().backgroundColor
+        if self.hasImage {
+            self.imageView?.tintColor = self.isSelected ? NeuButton.appearance().backgroundColor : NeuButton.appearance().tintColor
+            self.imageView?.image = self.imageForState(self.state)
+        }
+        if self.hasTitle {
+            self.titleLabel?.text = self.titleForState(self.state)
+        }
         self.neuLayer.applyShadow(self.state)
     }
     
@@ -80,6 +94,10 @@ class NeuButton: NeuControl {
         return titleLabel
     }()
     private var titles: [UIControl.State.RawValue:String?] = [:]
+    
+    private var hasTitle: Bool {
+        return self.titles.count > 0
+    }
 
     func titleForState(_ state: UIControl.State) -> String? {
         return (self.titles[state.rawValue] ?? self.titles[UIControl.State.normal.rawValue]) ?? nil
@@ -99,13 +117,18 @@ class NeuButton: NeuControl {
         return imageView
     }()
     private var images: [UIControl.State.RawValue:UIImage?] = [:]
+    var imageInset: CGFloat = -6
+
+    private var hasImage: Bool {
+        return self.images.count > 0
+    }
     
     func imageForState(_ state: UIControl.State) -> UIImage? {
         return (self.images[state.rawValue] ?? self.images[UIControl.State.normal.rawValue]) ?? nil
-   }
+    }
 
     func setImage(_ image: UIImage?, for state: UIControl.State) {
-        self.images[state.rawValue] = image?.withAlignmentRectInsets(UIEdgeInsets(top: -6, left: -6, bottom: -6, right: -6))
-        self.imageView?.image = self.imageForState(state)
+        self.images[state.rawValue] = image?.withAlignmentRectInsets(UIEdgeInsets(top: imageInset, left: imageInset, bottom: imageInset, right: imageInset))
+        self.imageView?.image = self.imageForState(UIControl.State.normal)
     }
 }

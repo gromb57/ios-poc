@@ -50,9 +50,9 @@ extension UIView {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            self.topAnchor.constraint(equalTo: toView.safeAreaLayoutGuide.topAnchor, constant: inset.top),
-            self.leadingAnchor.constraint(equalTo: toView.safeAreaLayoutGuide.leadingAnchor, constant: inset.left),
-            self.trailingAnchor.constraint(equalTo: toView.safeAreaLayoutGuide.trailingAnchor, constant: -inset.right)
+            self.topAnchor.constraint(equalTo: toView.topAnchor, constant: inset.top),
+            self.leadingAnchor.constraint(equalTo: toView.leadingAnchor, constant: inset.left),
+            self.trailingAnchor.constraint(equalTo: toView.trailingAnchor, constant: -inset.right)
         ])
     }
 
@@ -65,9 +65,9 @@ extension UIView {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            self.bottomAnchor.constraint(equalTo: toView.safeAreaLayoutGuide.bottomAnchor, constant: -inset.bottom),
-            self.leadingAnchor.constraint(equalTo: toView.safeAreaLayoutGuide.leadingAnchor, constant: inset.left),
-            self.trailingAnchor.constraint(equalTo: toView.safeAreaLayoutGuide.trailingAnchor, constant: -inset.right)
+            self.bottomAnchor.constraint(equalTo: toView.bottomAnchor, constant: -inset.bottom),
+            self.leadingAnchor.constraint(equalTo: toView.leadingAnchor, constant: inset.left),
+            self.trailingAnchor.constraint(equalTo: toView.trailingAnchor, constant: -inset.right)
         ])
     }
 

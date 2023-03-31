@@ -10,6 +10,8 @@ import UIKit
 
 final class MusicPlayerVC: UIViewController {
 
+    private var timer: Timer?
+
     lazy var backButton: NeuButton = {
         let button = NeuButton(frame: .zero)
         button.setImage(UIImage(systemName: "arrow.backward"), for: UIControl.State.normal)
@@ -39,6 +41,20 @@ final class MusicPlayerVC: UIViewController {
     let songImage: NeuImageView = {
         let image = NeuImageView(frame: .zero)
         return image
+    }()
+
+    var songDuration: CGFloat = 220 // seconds
+    let doneLabel: NeuLabel = {
+        let doneLabel = NeuLabel(frame: .zero)
+        doneLabel.font = doneLabel.font.withSize(10)
+        doneLabel.text = "0:00"
+        return doneLabel
+    }()
+    let leftLabel: NeuLabel = {
+        let leftLabel = NeuLabel(frame: .zero)
+        leftLabel.font = leftLabel.font.withSize(10)
+        leftLabel.text = "3:20"
+        return leftLabel
     }()
     
     override func viewDidLoad() {
@@ -112,11 +128,34 @@ final class MusicPlayerVC: UIViewController {
         let sliderView = UIView(frame: .zero)
         stack.addArrangedSubview(sliderView)
 
+        let sliderLabelStack = UIStackView()
+        sliderLabelStack.axis = .horizontal
+        sliderLabelStack.constraint(size: CGSize(width: 280, height: 14))
+        sliderView.addSubview(sliderLabelStack)
+        sliderLabelStack.constraintToTop()
+        
+        sliderLabelStack.addArrangedSubview(self.doneLabel)
+        sliderLabelStack.addArrangedSubview(self.leftLabel)
+        
         let slider = NeuSlider(frame: .zero)
         slider.layer.cornerRadius = 12
-        slider.constraint(size: CGSize(width: 280, height: 24))
+        slider.thumbDimRatio = 1.8
+        slider.constraint(size: CGSize(width: 280, height: 14))
         sliderView.addSubview(slider)
-        slider.constraint()
+        slider.constraintToBottom()
+        slider.topAnchor.constraint(equalTo: sliderLabelStack.bottomAnchor).isActive = true
+        slider.addAction(UIAction(handler: { [weak self] action in
+            let done = (self?.songDuration ?? 0) * slider.value
+            let left = (self?.songDuration ?? 0) - done
+            
+            let formatter = DateComponentsFormatter()
+            formatter.allowedUnits = [.minute, .second]
+            formatter.unitsStyle = .brief
+            
+            self?.doneLabel.text = formatter.string(from: TimeInterval(done))
+            self?.leftLabel.text = formatter.string(from: TimeInterval(left))
+        }), for: UIControl.Event.valueChanged)
+        slider.value = 0
 
         let controlsView = UIView(frame: .zero)
         controlsView.constraint(size: CGSize(width: CGFloat.nan, height: 64))
@@ -128,17 +167,34 @@ final class MusicPlayerVC: UIViewController {
         buttonStack.spacing = 24
         controlsView.addSubview(buttonStack)
         buttonStack.constraint()
-        let button4 = NeuButtonRounded(frame: .zero)
-        button4.setImage(UIImage(systemName: "backward.fill"), for: .normal)
-        button4.constraint(size: CGSize(width: 64, height: 64))
-        buttonStack.addArrangedSubview(button4)
-        let button6 = NeuButtonRounded(frame: .zero)
-        button6.setImage(UIImage(systemName: "play.fill"), for: .normal)
-        button6.constraint(size: CGSize(width: 64, height: 64))
-        buttonStack.addArrangedSubview(button6)
-        let button7 = NeuButtonRounded(frame: .zero)
-        button7.setImage(UIImage(systemName: "forward.fill"), for: .normal)
-        button7.constraint(size: CGSize(width: 64, height: 64))
-        buttonStack.addArrangedSubview(button7)
+        let buttonBackward = self.createButton(systemeName: "backward.fill")
+        buttonStack.addArrangedSubview(buttonBackward)
+        let buttonPlay = self.createButton(systemeName: "play.fill")
+        buttonPlay.setImage(UIImage(systemName: "pause.fill"), for: UIControl.State.selected)
+        buttonPlay.addAction(UIAction(handler: { action in
+            buttonPlay.isSelected = !buttonPlay.isSelected
+            if buttonPlay.isSelected {
+                self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+                    if slider.value >= 1 {
+                        slider.value = 0
+                    } else {
+                        slider.value += 0.1
+                    }
+                }
+            } else {
+                self.timer?.invalidate()
+            }
+        }), for: UIControl.Event.touchUpInside)
+        buttonStack.addArrangedSubview(buttonPlay)
+        let buttonForward = self.createButton(systemeName: "forward.fill")
+        buttonStack.addArrangedSubview(buttonForward)
+    }
+
+    private func createButton(systemeName: String) -> NeuButtonRounded {
+        let button = NeuButtonRounded(frame: .zero)
+        button.imageInset = -24
+        button.setImage(UIImage(systemName: systemeName), for: .normal)
+        button.constraint(size: CGSize(width: 64, height: 64))
+        return button
     }
 }

@@ -25,10 +25,16 @@ struct Theme {
     }
 
     func applyNeuAppearance() {
+        self.applyNeuButtonAppearance()
         self.applyNeuControlAppearance()
         self.applyNeuImageViewAppearance()
         self.applyNeuSliderAppearance()
         self.applyNeuTextFieldAppearance()
+    }
+
+    func applyNeuButtonAppearance() {
+        NeuButton.appearance().backgroundColor = self.bgColor
+        NeuButton.appearance().tintColor = self.mainColor
     }
 
     func applyNeuControlAppearance() {

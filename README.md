@@ -30,3 +30,7 @@ Source : https://stackoverflow.com/a/40424891
 #### Calculator
 
 ![Calculator](/readme/img/calculator.png?raw=true "Calculator")
+
+#### Music Player
+
+![Music Player](/readme/img/music_player.png?raw=true "Music Player")

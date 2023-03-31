@@ -66,6 +66,8 @@ class NeuLayer: CALayer {
         case .highlighted:
             self.applyInnerShadow(layer)
             layer.borderWidth = 0
+        case .selected:
+            self.applyInnerShadow(layer)
         default:
             layer.borderColor = self.borderColor.cgColor
             layer.borderWidth = 1

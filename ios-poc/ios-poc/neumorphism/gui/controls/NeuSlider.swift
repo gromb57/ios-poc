@@ -15,6 +15,7 @@ class NeuSlider: UIControl, UIViewCodingProtocol {
     private let thumbLayer = NeuLayer()
 
     var inset: CGFloat = 4
+    var thumbDimRatio: CGFloat = 1
     var thumbAspectRatio: CGFloat = 1
     private let thumbOffset: CGFloat = 12.0
 
@@ -55,11 +56,11 @@ class NeuSlider: UIControl, UIViewCodingProtocol {
     }
     
     private func updateThumbStyle() {
-        let dim = min(self.layer.bounds.width, self.layer.bounds.height)
+        let dim = min(self.layer.bounds.width, self.layer.bounds.height) * self.thumbDimRatio
         self.thumbLayer.bounds = CGRect(origin: .zero, size: CGSize(width: dim * self.thumbAspectRatio, height: dim))
         self.thumbLayer.applyShadow()
         self.thumbLayer.backgroundColor = self.thumbColor?.cgColor
-        self.thumbLayer.cornerRadius = self.layer.cornerRadius
+        self.thumbLayer.cornerRadius = self.layer.cornerRadius == 0 ? 0 : (dim / 2)
     }
     
     private func updateThumbPosition() {
@@ -67,7 +68,7 @@ class NeuSlider: UIControl, UIViewCodingProtocol {
         let trackWidth = self.layer.bounds.width - thumbRadius
         let thumbPosition = self.thumbOffset  + (self.value - self.minimumValue) * trackWidth / (self.maximumValue - self.minimumValue)
         //self.thumbLayer.position = CGPoint(x: thumbPosition, y: bounds.midY)
-        self.thumbLayer.frame.origin = CGPoint(x: thumbPosition - self.inset * 2, y: 0)
+        self.thumbLayer.frame.origin = CGPoint(x: thumbPosition - self.inset * 2, y: (self.layer.bounds.height - self.thumbLayer.bounds.height) / 2)
     }
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
