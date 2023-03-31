@@ -65,6 +65,7 @@ final class MusicPlayerVC: UIViewController {
     }
 
     deinit {
+        self.timer?.invalidate()
         //self.navigationController?.navigationBar.isHidden = false
     }
 
@@ -171,10 +172,10 @@ final class MusicPlayerVC: UIViewController {
         buttonStack.addArrangedSubview(buttonBackward)
         let buttonPlay = self.createButton(systemeName: "play.fill")
         buttonPlay.setImage(UIImage(systemName: "pause.fill"), for: UIControl.State.selected)
-        buttonPlay.addAction(UIAction(handler: { action in
+        buttonPlay.addAction(UIAction(handler: { [weak self] action in
             buttonPlay.isSelected = !buttonPlay.isSelected
             if buttonPlay.isSelected {
-                self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+                self?.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                     if slider.value >= 1 {
                         slider.value = 0
                     } else {
@@ -182,7 +183,7 @@ final class MusicPlayerVC: UIViewController {
                     }
                 }
             } else {
-                self.timer?.invalidate()
+                self?.timer?.invalidate()
             }
         }), for: UIControl.Event.touchUpInside)
         buttonStack.addArrangedSubview(buttonPlay)

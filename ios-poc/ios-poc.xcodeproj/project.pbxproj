@@ -44,6 +44,7 @@
 		A07FDB1629D4B60000253CDF /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FDB1529D4B60000253CDF /* CalculatorVC.swift */; };
 		A07FDB1829D6055D00253CDF /* NeuImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FDB1729D6055D00253CDF /* NeuImageView.swift */; };
 		A0882DC129D0ECD700CF297A /* NeuSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0882DC029D0ECD700CF297A /* NeuSegment.swift */; };
+		A0D4D3BF29D76AF300C6B912 /* ClockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4D3BE29D76AF300C6B912 /* ClockVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		A07FDB1529D4B60000253CDF /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		A07FDB1729D6055D00253CDF /* NeuImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuImageView.swift; sourceTree = "<group>"; };
 		A0882DC029D0ECD700CF297A /* NeuSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuSegment.swift; sourceTree = "<group>"; };
+		A0D4D3BE29D76AF300C6B912 /* ClockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				A07FDB1529D4B60000253CDF /* CalculatorVC.swift */,
+				A0D4D3BE29D76AF300C6B912 /* ClockVC.swift */,
 				A07FDB1329D4B5CF00253CDF /* MusicPlayerVC.swift */,
 			);
 			path = examples;
@@ -451,6 +454,7 @@
 				A01B3C4F29CF4E3C00BEFEA7 /* NeuSegmentedControl.swift in Sources */,
 				A054E42C29CB805B00C1C1AD /* ios_poc.xcdatamodeld in Sources */,
 				A054E49029CCDC2800C1C1AD /* UIViewCodingProtocol.swift in Sources */,
+				A0D4D3BF29D76AF300C6B912 /* ClockVC.swift in Sources */,
 				A01B3C5E29D0356E00BEFEA7 /* TrigoCircleVC.swift in Sources */,
 				A054E42629CB805B00C1C1AD /* RootViewController.swift in Sources */,
 				A054E42229CB805B00C1C1AD /* AppDelegate.swift in Sources */,

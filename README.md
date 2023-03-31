@@ -31,6 +31,10 @@ Source : https://stackoverflow.com/a/40424891
 
 ![Calculator](/readme/img/calculator.png?raw=true "Calculator")
 
+#### Clock
+
+![Clock](/readme/img/clock.png?raw=true "Clock")
+
 #### Music Player
 
 ![Music Player](/readme/img/music_player.png?raw=true "Music Player")

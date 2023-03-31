@@ -29,6 +29,7 @@ final class RootViewController: UITableViewController {
         ]),
         Section(title: "Examples", rows: [
             Row(title: "Calculator", controller: CalculatorVC.self),
+            Row(title: "Clock", controller: ClockVC.self),
             Row(title: "Music Player", controller: MusicPlayerVC.self)
         ])
     ]
