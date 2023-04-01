@@ -66,6 +66,13 @@ final class CardVC: UIViewController {
         imageView.contentMode = .scaleAspectFit
         card.addSubview(imageView)
         imageView.constraint()
+        
+        let hiddenImage = UIImage(systemName: "\(Int.random(in: 0..<11)).circle.fill")
+        let hiddenImageView = UIImageView(image: hiddenImage)
+        hiddenImageView.contentMode = .scaleAspectFit
+        hiddenImageView.isHidden = true
+        card.addSubview(hiddenImageView)
+        hiddenImageView.constraint()
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapAction))
         card.addGestureRecognizer(tap)
@@ -76,8 +83,18 @@ final class CardVC: UIViewController {
         guard let card = sender.view as? NeuCard else {
             return
         }
-        UIView.animate(withDuration: 1, delay: 0) {
+        /*UIView.animate(withDuration: 1, delay: 0) {
             card.transform3D = CATransform3DRotate(card.transform3D, .pi, 0, 1, 0)
+        }*/
+        let flipped = card.subviews.first?.isHidden == false
+        guard let fromView = flipped ? card.subviews.first : card.subviews[1] else {
+            return
         }
+        guard let toView = flipped ? card.subviews[1] : card.subviews.first else {
+            return
+        }
+        let flipDirection: UIView.AnimationOptions = flipped ? .transitionFlipFromRight : .transitionFlipFromLeft
+        let options: UIView.AnimationOptions = [flipDirection, .showHideTransitionViews]
+        UIView.transition(from: fromView, to: toView, duration: 0.6, options: options)
     }
 }
