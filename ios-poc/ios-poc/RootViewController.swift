@@ -28,6 +28,7 @@ final class RootViewController: UITableViewController {
             Row(title: "Trigonometric circle", controller: TrigoCircleVC.self)
         ]),
         Section(title: "Examples", rows: [
+            Row(title: "Card", controller: CardVC.self),
             Row(title: "Calculator", controller: CalculatorVC.self),
             Row(title: "Clock", controller: ClockVC.self),
             Row(title: "Music Player", controller: MusicPlayerVC.self)
