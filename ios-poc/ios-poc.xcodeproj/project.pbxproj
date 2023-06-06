@@ -43,6 +43,7 @@
 		A07FDB1429D4B5CF00253CDF /* MusicPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FDB1329D4B5CF00253CDF /* MusicPlayerVC.swift */; };
 		A07FDB1629D4B60000253CDF /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FDB1529D4B60000253CDF /* CalculatorVC.swift */; };
 		A07FDB1829D6055D00253CDF /* NeuImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07FDB1729D6055D00253CDF /* NeuImageView.swift */; };
+		A08506D32A2FCEB20074E918 /* spatial.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08506D22A2FCEB20074E918 /* spatial.swift */; };
 		A0882DC129D0ECD700CF297A /* NeuSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0882DC029D0ECD700CF297A /* NeuSegment.swift */; };
 		A0D4D3BF29D76AF300C6B912 /* ClockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4D3BE29D76AF300C6B912 /* ClockVC.swift */; };
 		A0D4D3C129D85CC300C6B912 /* CardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4D3C029D85CC300C6B912 /* CardVC.swift */; };
@@ -106,6 +107,7 @@
 		A07FDB1329D4B5CF00253CDF /* MusicPlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerVC.swift; sourceTree = "<group>"; };
 		A07FDB1529D4B60000253CDF /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		A07FDB1729D6055D00253CDF /* NeuImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuImageView.swift; sourceTree = "<group>"; };
+		A08506D22A2FCEB20074E918 /* spatial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spatial.swift; sourceTree = "<group>"; };
 		A0882DC029D0ECD700CF297A /* NeuSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuSegment.swift; sourceTree = "<group>"; };
 		A0D4D3BE29D76AF300C6B912 /* ClockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockVC.swift; sourceTree = "<group>"; };
 		A0D4D3C029D85CC300C6B912 /* CardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardVC.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				A054E45429CB8F3F00C1C1AD /* neumorphism */,
 				A054E42529CB805B00C1C1AD /* RootViewController.swift */,
 				A054E42329CB805B00C1C1AD /* SceneDelegate.swift */,
+				A08506D12A2FCE940074E918 /* spatial */,
 				A054E47C29CB97D700C1C1AD /* theme */,
 				A054E48329CBA3D000C1C1AD /* utils */,
 			);
@@ -311,6 +314,14 @@
 				A07FDB1329D4B5CF00253CDF /* MusicPlayerVC.swift */,
 			);
 			path = examples;
+			sourceTree = "<group>";
+		};
+		A08506D12A2FCE940074E918 /* spatial */ = {
+			isa = PBXGroup;
+			children = (
+				A08506D22A2FCEB20074E918 /* spatial.swift */,
+			);
+			path = spatial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,6 +459,7 @@
 				A07FDB1429D4B5CF00253CDF /* MusicPlayerVC.swift in Sources */,
 				A01B3C5929CF505D00BEFEA7 /* NeuProgressBar.swift in Sources */,
 				A0882DC129D0ECD700CF297A /* NeuSegment.swift in Sources */,
+				A08506D32A2FCEB20074E918 /* spatial.swift in Sources */,
 				A054E49829CF329B00C1C1AD /* NeuLabel.swift in Sources */,
 				A01B3C4D29CF4DEA00BEFEA7 /* NeuTextField.swift in Sources */,
 				A01B3C5B29CFABC900BEFEA7 /* CGFloat+Extension.swift in Sources */,
