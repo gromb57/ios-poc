@@ -17,8 +17,19 @@ extension UIScrollView {
             subView.topAnchor.constraint(equalTo: self.topAnchor),
             subView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             subView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            subView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            subView.widthAnchor.constraint(equalTo: self.widthAnchor)
+            subView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+        ])
+    }
+    
+    func constraintVertically(subView: UIView) {
+        NSLayoutConstraint.activate([
+            self.contentLayoutGuide.heightAnchor.constraint(equalTo: subView.heightAnchor)
+        ])
+    }
+    
+    func constraintHorizontally(subView: UIView) {
+        NSLayoutConstraint.activate([
+            self.contentLayoutGuide.widthAnchor.constraint(equalTo: subView.widthAnchor)
         ])
     }
 }

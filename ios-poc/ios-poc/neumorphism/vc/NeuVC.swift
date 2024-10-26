@@ -34,16 +34,20 @@ final class NeuVC: UIViewController {
         self.stackView = UIStackView()
         // self.stackView.backgroundColor = .red
         self.stackView.axis = NSLayoutConstraint.Axis.vertical
-        self.stackView.distribution = UIStackView.Distribution.fillProportionally
         self.stackView.spacing = 10
-
-        self.addGuis()
         
         self.view.addSubview(self.scrollView)
         self.scrollView.addSubview(self.stackView)
 
         self.scrollView.constraint()
         self.scrollView.constraint(subView: self.stackView)
+        NSLayoutConstraint.activate([
+            self.stackView.widthAnchor.constraint(equalTo: self.scrollView.widthAnchor)
+        ])
+        self.scrollView.constraintVertically(subView: self.stackView)
+        self.scrollView.constraintHorizontally(subView: self.stackView)
+        
+        self.addGuis()
     }
 
     private func addGuis() {
@@ -51,6 +55,7 @@ final class NeuVC: UIViewController {
         button.setTitle("Button", for: .normal)
         button.constraint(size: CGSize(width: CGFloat.nan, height: 44))
         self.addGui(view: button)
+        
         
         let button2 = NeuButton(frame: .zero)
         button2.setTitle("Button 2", for: .normal)
@@ -170,7 +175,9 @@ final class NeuVC: UIViewController {
     }
 
     private func addGui(view: UIView) {
-        let wrapper = UIView()
+        let wrapper = UIView(frame: view.bounds)
+        // wrapper.backgroundColor = .green
+        wrapper.translatesAutoresizingMaskIntoConstraints = false
         wrapper.addSubview(view)
         view.constraint(inset: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
         self.stackView.addArrangedSubview(wrapper)
