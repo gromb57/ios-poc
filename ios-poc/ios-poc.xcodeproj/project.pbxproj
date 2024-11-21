@@ -51,6 +51,8 @@
 		A0BA9E512CCCDC00005C6175 /* DisplayConfettiModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA9E4C2CCCDC00005C6175 /* DisplayConfettiModifier.swift */; };
 		A0BA9E522CCCDC00005C6175 /* View+DisplayConfetti.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA9E4D2CCCDC00005C6175 /* View+DisplayConfetti.swift */; };
 		A0BA9E542CCCDC00005C6175 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA9E4B2CCCDC00005C6175 /* ConfettiView.swift */; };
+		A0BA9E572CEF420B005C6175 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA9E562CEF420B005C6175 /* ChatVC.swift */; };
+		A0BA9E592CEF58F8005C6175 /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA9E582CEF58EC005C6175 /* ChatBubbleView.swift */; };
 		A0D4D3BF29D76AF300C6B912 /* ClockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4D3BE29D76AF300C6B912 /* ClockVC.swift */; };
 		A0D4D3C129D85CC300C6B912 /* CardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D4D3C029D85CC300C6B912 /* CardVC.swift */; };
 /* End PBXBuildFile section */
@@ -121,6 +123,8 @@
 		A0BA9E4B2CCCDC00005C6175 /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
 		A0BA9E4C2CCCDC00005C6175 /* DisplayConfettiModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayConfettiModifier.swift; sourceTree = "<group>"; };
 		A0BA9E4D2CCCDC00005C6175 /* View+DisplayConfetti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+DisplayConfetti.swift"; sourceTree = "<group>"; };
+		A0BA9E562CEF420B005C6175 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		A0BA9E582CEF58EC005C6175 /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
 		A0D4D3BE29D76AF300C6B912 /* ClockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockVC.swift; sourceTree = "<group>"; };
 		A0D4D3C029D85CC300C6B912 /* CardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +188,7 @@
 				A054E42129CB805B00C1C1AD /* AppDelegate.swift */,
 				A054E42D29CB805E00C1C1AD /* Assets.xcassets */,
 				A01B3C5C29D0353700BEFEA7 /* cg */,
+				A0BA9E552CEF41BC005C6175 /* chat */,
 				A0BA9E4E2CCCDC00005C6175 /* confetti */,
 				A07FDB1229D4B59900253CDF /* examples */,
 				A054E43229CB805E00C1C1AD /* Info.plist */,
@@ -350,6 +355,15 @@
 			path = confetti;
 			sourceTree = "<group>";
 		};
+		A0BA9E552CEF41BC005C6175 /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				A0BA9E582CEF58EC005C6175 /* ChatBubbleView.swift */,
+				A0BA9E562CEF420B005C6175 /* ChatVC.swift */,
+			);
+			path = chat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -494,6 +508,7 @@
 				A0BA9E542CCCDC00005C6175 /* ConfettiView.swift in Sources */,
 				A054E49829CF329B00C1C1AD /* NeuLabel.swift in Sources */,
 				A01B3C4D29CF4DEA00BEFEA7 /* NeuTextField.swift in Sources */,
+				A0BA9E592CEF58F8005C6175 /* ChatBubbleView.swift in Sources */,
 				A01B3C5B29CFABC900BEFEA7 /* CGFloat+Extension.swift in Sources */,
 				A054E48D29CCDB3A00C1C1AD /* NeuControl.swift in Sources */,
 				A054E49A29CF37EA00C1C1AD /* NeuCard.swift in Sources */,
@@ -514,6 +529,7 @@
 				A054E48229CB9BCE00C1C1AD /* ThemeType.swift in Sources */,
 				A054E42429CB805B00C1C1AD /* SceneDelegate.swift in Sources */,
 				A01B3C5729CF503100BEFEA7 /* NeuSlider.swift in Sources */,
+				A0BA9E572CEF420B005C6175 /* ChatVC.swift in Sources */,
 				A01B3C5529CF4EA400BEFEA7 /* NeuRadio.swift in Sources */,
 				A01B3C5129CF4E8200BEFEA7 /* NeuSwitch.swift in Sources */,
 				A07FDB1829D6055D00253CDF /* NeuImageView.swift in Sources */,
