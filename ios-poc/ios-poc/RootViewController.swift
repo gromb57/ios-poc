@@ -33,7 +33,8 @@ final class RootViewController: UITableViewController {
             Row(title: "Clock", controller: ClockVC.self),
             Row(title: "Music Player", controller: MusicPlayerVC.self),
             Row(title: "Confetti", controller: ConfettiVC.self),
-            Row(title: "Chat", controller: ChatVC.self)
+            Row(title: "Chat", controller: ChatVC.self),
+            Row(title: "Firework", controller: FireworkVC.self),
         ])
     ]
     

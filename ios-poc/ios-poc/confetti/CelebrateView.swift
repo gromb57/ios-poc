@@ -15,6 +15,8 @@ struct CelebrateView: View {
                 self.showConfetti = !self.showConfetti
             }.buttonStyle(.plain)
                 .padding()
+                .background(.white)
+                .foregroundColor(.black)
         }
         .displayConfetti(isActive: self.$showConfetti)
     }
