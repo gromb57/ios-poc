@@ -35,6 +35,8 @@ final class RootViewController: UITableViewController {
             Row(title: "Confetti", controller: ConfettiVC.self),
             Row(title: "Chat", controller: ChatVC.self),
             Row(title: "Firework", controller: FireworkVC.self),
+            Row(title: "Login", controller: LoginVC.self),
+            Row(title: "Settings", controller: SettingsVC.self),
         ])
     ]
     

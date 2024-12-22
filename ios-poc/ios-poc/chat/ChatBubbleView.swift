@@ -16,7 +16,7 @@ final class ChatBubbleView: UIView {
     
     let mock: String = "blabla <a href=\"https://www.apple.com/\">click</a> end<br/>line2 <a href=\"tel://+33102030405\">tel</a><br/>line3<br/>line4<br/>line5<br/>line6<br/>"
     
-    // MARK: - UI
+    // MARK: - Initializers
     convenience init(state: State) {
         self.init(frame: .zero)
         
@@ -35,11 +35,43 @@ final class ChatBubbleView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func didAddSubview(_ subview: UIView) {
+        super.didAddSubview(subview)
+        print("\(#file) \(#function)")
+    }
 
+    override func willRemoveSubview(_ subview: UIView) {
+        super.willRemoveSubview(subview)
+        print("\(#file) \(#function)")
+    }
+
+    override func willMove(toSuperview newSuperview: UIView?) {
+        super.willMove(toSuperview: newSuperview)
+        print("\(#file) \(#function)")
+    }
+
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        print("\(#file) \(#function)")
+    }
+
+    override func willMove(toWindow newWindow: UIWindow?) {
+        super.willMove(toWindow: newWindow)
+        print("\(#file) \(#function)")
+    }
+
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
+        print("\(#file) \(#function)")
+    }
+
+    // MARK: - UI
     func initUIA() {
         let textview = UITextView(usingTextLayoutManager: false)
         textview.dataDetectorTypes = [.link, .phoneNumber]
         textview.text = mock
+        textview.isScrollEnabled = false
         textview.isEditable = false
         textview.delegate = self
         
@@ -88,6 +120,4 @@ extension ChatBubbleView: UITextViewDelegate {
     ) -> Bool {
         return true
     }
-    
-    
 }

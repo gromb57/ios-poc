@@ -51,6 +51,7 @@
 		A054E44129CB805E00C1C1AD /* ios-pocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-pocUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A054E44529CB805E00C1C1AD /* ios_pocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_pocUITests.swift; sourceTree = "<group>"; };
 		A054E44729CB805E00C1C1AD /* ios_pocUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_pocUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A0E1588B2D1871A300227C73 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -59,6 +60,7 @@
 			membershipExceptions = (
 				"blooming-firework.metal",
 				BloomingFirework.swift,
+				FireworkVC.swift,
 			);
 			target = A054E41D29CB805B00C1C1AD /* ios-poc */;
 		};
@@ -74,6 +76,8 @@
 		A0E1586E2D1814B300227C73 /* spatial */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = spatial; sourceTree = "<group>"; };
 		A0E158732D1814B700227C73 /* theme */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = theme; sourceTree = "<group>"; };
 		A0E1587E2D1814B900227C73 /* utils */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = utils; sourceTree = "<group>"; };
+		A0E1588C2D188E3E00227C73 /* settings */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = settings; sourceTree = "<group>"; };
+		A0E158962D1898C600227C73 /* login */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = login; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 				A054E43A29CB805E00C1C1AD /* ios-pocTests */,
 				A054E44429CB805E00C1C1AD /* ios-pocUITests */,
 				A054E41F29CB805B00C1C1AD /* Products */,
+				A0E1588B2D1871A300227C73 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,10 +139,12 @@
 				A054E43229CB805E00C1C1AD /* Info.plist */,
 				A054E42A29CB805B00C1C1AD /* ios_poc.xcdatamodeld */,
 				A054E42F29CB805E00C1C1AD /* LaunchScreen.storyboard */,
+				A0E158962D1898C600227C73 /* login */,
 				A054E42729CB805B00C1C1AD /* Main.storyboard */,
 				A0E1585C2D1814B100227C73 /* neumorphism */,
 				A054E42529CB805B00C1C1AD /* RootViewController.swift */,
 				A054E42329CB805B00C1C1AD /* SceneDelegate.swift */,
+				A0E1588C2D188E3E00227C73 /* settings */,
 				A0E1586E2D1814B300227C73 /* spatial */,
 				A0E158732D1814B700227C73 /* theme */,
 				A0E1587E2D1814B900227C73 /* utils */,
@@ -186,6 +193,8 @@
 				A0E1586E2D1814B300227C73 /* spatial */,
 				A0E158732D1814B700227C73 /* theme */,
 				A0E1587E2D1814B900227C73 /* utils */,
+				A0E1588C2D188E3E00227C73 /* settings */,
+				A0E158962D1898C600227C73 /* login */,
 			);
 			name = "ios-poc";
 			productName = "ios-poc";

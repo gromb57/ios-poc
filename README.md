@@ -38,3 +38,15 @@ Source : https://stackoverflow.com/a/40424891
 #### Music Player
 
 ![Music Player](/readme/img/music_player.png?raw=true "Music Player")
+
+## Fix Previews
+
+Path to previews resources directory :
+`/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Library/Developer/DeviceKit/Chrome/phone11.devicechrome/Contents/Resources`
+
+- Keep xcode updated
+- Change the Device Used for Previews
+- Kill PreviewShell in Activity Monitor or in CLI `xcrun simctl - set previews shutdown all`
+- Delete All Preview Caches `xcrun simctl - set previews delete all`
+- Enable Legacy Preview Mechanism : in Xcode, go to Editor > Canvas > Use Legacy Previews Execution
+- Use PreviewProvider
